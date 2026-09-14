@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<title>My Modification Request — Syspoint CRM</title>
+<head>
+<meta charset="UTF-8">
+<title>Add Company/Branch — Syspoint CRM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+    :root { --black:#080808; --red:#d71920; --red-dark:#b51218; --ink:#171717; --muted:#707070; --line:#e4e4e4; --canvas:#f7f7f7; --white:#fff; }
+    * { box-sizing: border-box; }
+    body { margin:0; color:var(--ink); background:var(--canvas); font-family:"DM Sans", sans-serif; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; padding:18px clamp(20px,4vw,54px); border-bottom:1px solid var(--line); background:var(--ink); }
+    .crumb { color:var(--muted); font-size:0.82rem; }
+    .crumb strong { color:var(--white); }
+    .content { max-width: 760px; margin:0 auto; padding:20px clamp(20px,4vw,54px) 60px; }
+    h1 { margin:0 0 6px; padding-top: 10px; padding-bottom: 15px; font-family:"Space Grotesk", sans-serif; font-size:clamp(1.5rem,3vw,2rem); }
+
+    .card{ 
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--white);
+    padding: 20px clamp(1px, 3vw, 15px);
+    }
+
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 8px; border-bottom: 1px darkgrey; font-size: 14px; }
+
+    .status-active { background: #e3f5e6; color: #1a7a30; padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+    .status-warning { background: #fdf1d6; color: #93650b; padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+    .status-danger { background: #fbe1e0; color: #a32b26; padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+    .status-neutral { background: #eee; color: #666; padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+
+    a { text-decoration: none; color: var(--white); }
+    button { cursor: pointer; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: 5px; padding: 11px 15px; color: var(--white); background: var(--red); font-size: 0.82rem; font-weight: 700; transition: background 150ms ease, transform 150ms ease; }
+    .button:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 6px 14px rgba(215, 25, 32, 0.18); }
+
+</style>
+</head>
+<body>
+   <header class="topbar">
+    <div class="crumb">Workspace / <strong>Add company</strong></div>
+    <div class="button"><a href="dashboard.php">Back to dashboard</a></div>
+</header>
+
+<div class="content">
+<h1>My Modification Request</h1>
+
+<div class="card">
+<table>
+        <tbody>
+            <tr><th>Client</th><th>Field</th><th>Old → New</th><th>Status</th><th>Submitted</th></tr>
+                    <tr>
+                <td>Company name or something — none</td>
+                <td>address</td>
+                <td>On earth → On Mars</td>
+                <td><span class="status-active">Fully approved &amp; applied</span></td>
+                <td>2026-09-03 07:47:55</td>
+            </tr>
+            </tbody></table>
+</div>
+</div>
+</div>
+</body>
+</html>

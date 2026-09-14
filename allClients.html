@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<title>All Clients — Syspoint CRM</title>
+<head>
+<meta charset="UTF-8">
+<title>Add Company/Branch — Syspoint CRM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+
+    :root { --black:#080808; --red:#d71920; --red-dark:#b51218; --ink:#171717; --muted:#707070; --line:#e4e4e4; --canvas:#f7f7f7; --white:#fff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--canvas); font-family: "DM Sans", sans-serif; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; padding: 18px clamp(20px,4vw,54px); border-bottom:1px solid var(--line); background:var(--ink); }
+    .crumb { color: var(--muted); font-size:0.82rem; }
+    .crumb strong { color: white; }
+    .content { max-width: 1280px; margin: 0 auto; padding: 30px clamp(20px,4vw,54px) 60px; }
+    h1 { margin:0; font-family:"Space Grotesk", sans-serif; font-size: clamp(1.5rem,3vw,2rem); }
+    .content > p.sub { margin: 8px 0 26px; color: var(--muted); font-size: 0.88rem; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 30px; }
+    .stat { min-height: 113px; border: 1px solid var(--line); border-radius: 6px; padding: 19px 20px; background: var(--white); box-shadow: 0 5px 18px rgba(8, 8, 8, 0.035); transition: border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease; }
+    .stat:hover { border-color: #cfcfcf; transform: translateY(-2px); box-shadow: 0 9px 22px rgba(8, 8, 8, 0.08); }
+    .stat.accent { border-top: 3px solid var(--red); padding-top: 17px; }
+    .stat-label { color: var(--muted); font-size: 0.75rem; font-weight: 700; }
+    .stat strong { display: block; margin-top: 12px; color: var(--black); font-family: "Space Grotesk", sans-serif; font-size: 1.9rem; }
+    .table-card { border:2px solid #d5cdcd; border-radius:6px; background:var(--white); overflow:hidden; }
+    .table-toolbar { padding:16px 20px; border-bottom:1px solid var(--line); }
+    .search { border:1px solid var(--line); border-radius:5px; padding:9px 12px; width:240px; font-size:0.8rem; }
+    table { width:100%; border-collapse:collapse; min-width: 720px; }
+    th { padding:12px 20px; background:#fbfbfb; color:#858585; font-size:0.68rem; font-weight:700; text-transform:uppercase; text-align:left; }
+    td { padding:14px 20px; border-top:1px solid #eee; color:#4f4f4f; font-size:0.82rem; }
+    td:first-child { color: var(--ink); font-weight:700; }
+    .status { font-weight:700; font-size:0.76rem; }
+    .status.active { color:#1a7a30; }
+    .status.warning { color:#93650b; }
+    .status.danger { color:#a32b26; }
+    .status.neutral { color:#707070; }
+    .table-wrap { overflow-x:auto; }
+
+    a { text-decoration: none; color: var(--white); }
+    button { cursor: pointer; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: 5px; padding: 11px 15px; color: var(--white); background: var(--red); font-size: 0.82rem; font-weight: 700; transition: background 150ms ease, transform 150ms ease; }
+    .button:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 6px 14px rgba(215, 25, 32, 0.18); }
+ 
+    </style>
+    </head>
+    <body>
+        <header class="topbar">
+    <div class="crumb">Workspace / <strong>Add company</strong></div>
+    <div class="button"><a href="dashboard.php">Back to dashboard</a></div>
+</header>
+
+<div class="content">
+    <h1>All CLients</h1>
+    <p class="sub">Every active client across the whole team, visible to Admin and Super Admin.</p>
+    <div class="stats">
+        <div class="stat accent"><span class="stat-label">Total clients</span><strong>15</strong></div>
+        <div class="stat"><span class="stat-label">Active</span><strong>10</strong></div>
+        <div class="stat"><span class="stat-label">3-month warning</span><strong>0</strong></div>
+        <div class="stat"><span class="stat-label">Reassignment flag</span><strong>0</strong></div>
+    </div>
+    <div class="table-card">
+        <div class="table-toolbar">
+            <input class="search" id="search" type="search" placeholder="Search company, branch, or owner..." aria-label="Search">
+        </div>
+        <div class="table-wrap">
+        <table>
+            <thead><tr><th>Company</th><th>Branch</th><th>Assigned to</th><th>Last order</th><th>Status</th></tr></thead>
+            <tbody id="rows">
+                                                                                    <tr>
+                            <td>A company</td>
+                            <td>none</td>
+                            <td>Reese mercado</td>
+                            <td>2026-09-04</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+                                                                    <tr>
+                            <td>A company</td>
+                            <td>none</td>
+                            <td>Reese mercado</td>
+                            <td>2026-09-04</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+                                                                    <tr>
+                            <td>A company</td>
+                            <td>none</td>
+                            <td>Reese mercado</td>
+                            <td>2026-09-04</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+                                                                    <tr>
+                            <td>A company</td>
+                            <td>none</td>
+                            <td>Reese mercado</td>
+                            <td>2026-09-04</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+                                                                    <tr>
+                            <td>A company</td>
+                            <td>none</td>
+                            <td>Reese mercado</td>
+                            <td>2026-09-04</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+                                                                    <tr>
+                            <td>A company</td>
+                            <td>none</td>
+                            <td>Reese mercado</td>
+                            <td>2026-09-04</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+                                                                    <tr>
+                            <td>A company</td>
+                            <td>none</td>
+                            <td>Reese mercado</td>
+                            <td>2026-09-04</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+                                                                    <tr>
+                            <td>A company</td>
+                            <td>none</td>
+                            <td>Reese mercado</td>
+                            <td>—</td>
+                            <td><span class="status neutral">No orders yet</span></td>
+                        </tr>
+                                                                    <tr>
+                            <td>A company</td>
+                            <td>none</td>
+                            <td>Reese mercado</td>
+                            <td>—</td>
+                            <td><span class="status neutral">No orders yet</span></td>
+                        </tr>
+                                                                    <tr>
+                            <td>A company</td>
+                            <td>none</td>
+                            <td>Reese mercado</td>
+                            <td>—</td>
+                            <td><span class="status neutral">No orders yet</span></td>
+                        </tr>
+                                                                    <tr>
+                            <td>A company</td>
+                            <td>none</td>
+                            <td>Reese mercado</td>
+                            <td>2026-09-04</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+                                                                    <tr>
+                            <td>A company</td>
+                            <td>none</td>
+                            <td>Reese mercado</td>
+                            <td>2026-09-04</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+                                                                    <tr>
+                            <td>A company</td>
+                            <td>none</td>
+                            <td>Mark Red</td>
+                            <td>—</td>
+                            <td><span class="status neutral">No orders yet</span></td>
+                        </tr>
+                                                                    <tr>
+                            <td>Company name or something</td>
+                            <td>none</td>
+                            <td>Reese mercado</td>
+                            <td>2027-11-18</td>
+                            <td><span class="status active">Active</span></td>
+                        </tr>
+                                                                    <tr>
+                            <td>b</td>
+                            <td>fff</td>
+                            <td>Mark Red</td>
+                            <td>—</td>
+                            <td><span class="status neutral">No orders yet</span></td>
+                        </tr>
+                                                </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+<script>
+
+
+</script>
+    </body>
+</html>

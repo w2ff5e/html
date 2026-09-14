@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Audit Log — Syspoint CRM</title>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+
+    :root { --black:#080808; --red:#d71920; --red-dark:#b51218; --ink:#171717; --muted:#707070; --line:#e4e4e4; --canvas:#f7f7f7; --white:#fff; }
+    * { box-sizing: border-box; }
+    body { margin:0; color:var(--ink); background:var(--canvas); font-family:"DM Sans", sans-serif; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; padding:18px clamp(20px,4vw,54px); border-bottom:1px solid var(--line); background:var(--ink); }
+    .crumb { color:var(--muted); font-size:0.82rem; }
+    .crumb strong { color:var(--white); }
+    .content { max-width: 1150px; margin:0 auto; padding:20px clamp(20px,4vw,54px) 60px; }
+    h1 { margin:0 0 6px; padding-top: 10px; padding-bottom: 15px; font-family:"Space Grotesk", sans-serif; font-size:clamp(1.5rem,3vw,2rem); }
+
+    a { text-decoration: none; color: var(--white); }
+    button { cursor: pointer; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: 5px; padding: 11px 15px; color: var(--white); background: var(--red); font-size: 0.82rem; font-weight: 700; transition: background 150ms ease, transform 150ms ease; }
+    .button:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 6px 14px rgba(215, 25, 32, 0.18); }
+
+    .card{ 
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--white);
+    padding: 20px clamp(1px, 3vw, 15px);
+    border-color: darkgray;
+}
+    table { width:100%; border-collapse:collapse; }
+    th { padding:12px 20px; background:#fbfbfb; color:#858585; font-size:0.68rem; font-weight:700; text-transform:uppercase; text-align:left; }
+    td { padding:12px 20px; font-size:0.85rem; vertical-align:middle; }
+    td:first-child { font-weight:700; }
+    button { padding: 6px 12px; cursor: pointer; margin: 0 0 3px; }
+</style>
+</head>
+<body>
+    <header class="topbar">
+    <div class="crumb">Workspace / <strong>Audit Log</strong></div>
+    <div class="button"><a href="dashboard.php">Back to dashboard</a></div>
+</header>
+
+<div class="content">
+    <h1>Audit Log</h1>
+    <p style="font-size:13px; color:#666;">Showing the most recent 200 actions across the system.</p>
+
+<div class="card">
+    <table>
+        <tbody><tr><th>When</th><th>Who</th><th>Action</th><th>Target</th><th>Details</th></tr>
+                    <tr>
+                <td>2026-09-14 00:27:17</td>
+                <td>Red</td>
+                <td><span class="action">export</span></td>
+                <td>branches</td>
+                <td>Exported all clients</td>
+            </tr>
+                    <tr>
+                <td>2026-09-14 00:24:36</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-14 00:24:30</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-14 00:23:47</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-14 00:23:41</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-14 00:23:36</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-14 00:21:50</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-14 00:21:46</td>
+                <td>Mark Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #1</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-14 00:21:37</td>
+                <td>Reese mercado</td>
+                <td><span class="action">logout</span></td>
+                <td>users #2</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-14 00:21:22</td>
+                <td>Mark Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #1</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-14 00:19:44</td>
+                <td>Reese mercado</td>
+                <td><span class="action">login</span></td>
+                <td>users #2</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 07:32:34</td>
+                <td>full name</td>
+                <td><span class="action">logout</span></td>
+                <td>users #5</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 07:31:37</td>
+                <td>full name</td>
+                <td><span class="action">login</span></td>
+                <td>users #5</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 07:31:26</td>
+                <td>Mark Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #1</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 07:31:14</td>
+                <td>Mark Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #1</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 07:31:08</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 07:29:59</td>
+                <td>Red</td>
+                <td><span class="action">create</span></td>
+                <td>branches #18</td>
+                <td>Added branch: cubao</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 07:27:05</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 05:41:44</td>
+                <td>super test w2</td>
+                <td><span class="action">logout</span></td>
+                <td>users #10</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 05:40:45</td>
+                <td>super test w2</td>
+                <td><span class="action">login</span></td>
+                <td>users #10</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 05:40:30</td>
+                <td>super test w2</td>
+                <td><span class="action">register</span></td>
+                <td>users #10</td>
+                <td>New account registered: w2ff5e@gmail.com</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 05:38:47</td>
+                <td>test again sup</td>
+                <td><span class="action">logout</span></td>
+                <td>users #9</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 05:38:41</td>
+                <td>test again sup</td>
+                <td><span class="action">login</span></td>
+                <td>users #9</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 05:38:27</td>
+                <td>test again sup</td>
+                <td><span class="action">setup_code_used</span></td>
+                <td>users #9</td>
+                <td>Granted super_admin via one-time setup code</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 05:38:27</td>
+                <td>test again sup</td>
+                <td><span class="action">register</span></td>
+                <td>users #9</td>
+                <td>New account registered: arerolla8@gmail.com</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 05:37:25</td>
+                <td>super test</td>
+                <td><span class="action">logout</span></td>
+                <td>users #8</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 05:37:19</td>
+                <td>super test</td>
+                <td><span class="action">login</span></td>
+                <td>users #8</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 05:37:06</td>
+                <td>super test</td>
+                <td><span class="action">register</span></td>
+                <td>users #8</td>
+                <td>New account registered: arerolla7@gmail.com</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 02:08:18</td>
+                <td>adm</td>
+                <td><span class="action">logout</span></td>
+                <td>users #7</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 02:05:48</td>
+                <td>adm</td>
+                <td><span class="action">login</span></td>
+                <td>users #7</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 02:05:33</td>
+                <td>adm</td>
+                <td><span class="action">register</span></td>
+                <td>users #7</td>
+                <td>New account registered: arerolla9@gmail.com</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 02:04:39</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:58:49</td>
+                <td>Red</td>
+                <td><span class="action">edit_approval</span></td>
+                <td>modification_requests #4</td>
+                <td>Admin approved request #4 — forwarded to super admin (significant change)</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:58:37</td>
+                <td>Red</td>
+                <td><span class="action">edit_approval</span></td>
+                <td>modification_requests #8</td>
+                <td>Admin approved request #8 — forwarded to super admin (significant change)</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:58:04</td>
+                <td>Red</td>
+                <td><span class="action">edit_request</span></td>
+                <td>modification_requests #8</td>
+                <td>Requested change to assigned_user_id on branch #16</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:54:16</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:53:03</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:52:53</td>
+                <td>Red</td>
+                <td><span class="action">edit_approval</span></td>
+                <td>modification_requests #7</td>
+                <td>Admin approved request #7 — forwarded to super admin (significant change)</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:51:51</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:51:42</td>
+                <td>Mark Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #1</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:51:31</td>
+                <td>Mark Red</td>
+                <td><span class="action">edit_request</span></td>
+                <td>modification_requests #7</td>
+                <td>Requested change to assigned_user_id on branch #15</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:51:19</td>
+                <td>Mark Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #1</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:51:13</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:50:44</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:44:26</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:40:21</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:40:12</td>
+                <td>Mark Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #1</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:25:46</td>
+                <td>Mark Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #1</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:25:35</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #6</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:25:30</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #6</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:24:11</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #6</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:24:09</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #6</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:23:46</td>
+                <td>Red</td>
+                <td><span class="action">password_reset</span></td>
+                <td>users #6</td>
+                <td>Password reset via email OTP</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:23:04</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #6</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:22:39</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #6</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-09 01:20:53</td>
+                <td>Red</td>
+                <td><span class="action">register</span></td>
+                <td>users #6</td>
+                <td>New account registered: arerolla1@gmail.com</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 06:19:14</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 06:19:03</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 05:35:55</td>
+                <td>Red</td>
+                <td><span class="action">export</span></td>
+                <td>branches</td>
+                <td>Exported all clients</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 05:35:09</td>
+                <td>Red</td>
+                <td><span class="action">export</span></td>
+                <td>branches</td>
+                <td>Exported all clients</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 03:14:19</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 02:04:40</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 02:04:34</td>
+                <td>full name</td>
+                <td><span class="action">logout</span></td>
+                <td>users #5</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 02:04:21</td>
+                <td>full name</td>
+                <td><span class="action">edit_request</span></td>
+                <td>modification_requests #6</td>
+                <td>Requested change to branch_name on branch #17</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 02:03:05</td>
+                <td>full name</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #17</td>
+                <td>Updated last order date to 2025-12-10</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 02:02:38</td>
+                <td>full name</td>
+                <td><span class="action">create</span></td>
+                <td>companies #5</td>
+                <td>Created company: PCkurt</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 02:02:38</td>
+                <td>full name</td>
+                <td><span class="action">create</span></td>
+                <td>branches #17</td>
+                <td>Added branch: tandang sora</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 02:01:02</td>
+                <td>full name</td>
+                <td><span class="action">login</span></td>
+                <td>users #5</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 02:00:53</td>
+                <td>full name</td>
+                <td><span class="action">register</span></td>
+                <td>users #5</td>
+                <td>New account registered: 313131@syspoint.com</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:56:45</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:54:40</td>
+                <td>Red</td>
+                <td><span class="action">export</span></td>
+                <td>branches</td>
+                <td>Exported all clients</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:51:38</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:51:09</td>
+                <td>Mark Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #1</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:44:19</td>
+                <td>Red</td>
+                <td><span class="action">edit_request</span></td>
+                <td>modification_requests #5</td>
+                <td>Requested change to branch_name on branch #16</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:43:56</td>
+                <td>Red</td>
+                <td><span class="action">edit_request</span></td>
+                <td>modification_requests #4</td>
+                <td>Requested change to assigned_user_id on branch #16</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:43:28</td>
+                <td>Red</td>
+                <td><span class="action">create</span></td>
+                <td>companies #4</td>
+                <td>Created company: ade</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:43:28</td>
+                <td>Red</td>
+                <td><span class="action">create</span></td>
+                <td>branches #16</td>
+                <td>Added branch: venus</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:42:17</td>
+                <td>Mark Red</td>
+                <td><span class="action">edit_request</span></td>
+                <td>modification_requests #3</td>
+                <td>Requested change to address on branch #15</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:42:04</td>
+                <td>Mark Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #1</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:42:00</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:29:40</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:29:35</td>
+                <td>Mark Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #1</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:25:39</td>
+                <td>Mark Red</td>
+                <td><span class="action">export</span></td>
+                <td>branches</td>
+                <td>Exported own clients</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:11:11</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:10:52</td>
+                <td>Reese mercado</td>
+                <td><span class="action">logout</span></td>
+                <td>users #2</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:09:16</td>
+                <td>Mark Red</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #15</td>
+                <td>Updated last order date to 2025-08-06</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:08:03</td>
+                <td>Mark Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #1</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:07:58</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:07:54</td>
+                <td>Red</td>
+                <td><span class="action">edit_approval</span></td>
+                <td>modification_requests #2</td>
+                <td>Admin rejected request #2</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:07:40</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 01:07:32</td>
+                <td>Mark Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #1</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 00:54:56</td>
+                <td>Mark Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #1</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 00:54:48</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 00:44:56</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-08 00:21:14</td>
+                <td>Reese mercado</td>
+                <td><span class="action">login</span></td>
+                <td>users #2</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 06:50:30</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 06:48:12</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 06:48:05</td>
+                <td>Mark Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #1</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 06:39:54</td>
+                <td>Mark Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #1</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 06:36:02</td>
+                <td>Mark Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #1</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 06:05:45</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 06:05:26</td>
+                <td>Reese mercado</td>
+                <td><span class="action">logout</span></td>
+                <td>users #2</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 06:01:16</td>
+                <td>Mark Red</td>
+                <td><span class="action">edit_request</span></td>
+                <td>modification_requests #2</td>
+                <td>Requested change to branch_name on branch #15</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 06:00:15</td>
+                <td>Mark Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #1</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 06:00:03</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 05:34:21</td>
+                <td>Red</td>
+                <td><span class="action">export</span></td>
+                <td>branches</td>
+                <td>Exported all clients</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 05:22:01</td>
+                <td>Red</td>
+                <td><span class="action">edit_approval</span></td>
+                <td>modification_requests #1</td>
+                <td>Admin approved and applied request #1 (non-significant)</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 05:20:50</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 02:17:15</td>
+                <td>Reese mercado</td>
+                <td><span class="action">login</span></td>
+                <td>users #2</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 02:17:13</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 01:35:46</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 01:35:35</td>
+                <td>supersomething</td>
+                <td><span class="action">logout</span></td>
+                <td>users #4</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 01:33:22</td>
+                <td>supersomething</td>
+                <td><span class="action">login</span></td>
+                <td>users #4</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 01:33:11</td>
+                <td>supersomething</td>
+                <td><span class="action">register</span></td>
+                <td>users #4</td>
+                <td>New account registered: supersomething@gmail.com</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 01:31:37</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 01:31:26</td>
+                <td>Red</td>
+                <td><span class="action">update</span></td>
+                <td>users #2</td>
+                <td>Updated Reese mercado — status: inactive -&gt; active</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 01:31:22</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 01:31:09</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 01:31:03</td>
+                <td>Red</td>
+                <td><span class="action">update</span></td>
+                <td>users #2</td>
+                <td>Updated Reese mercado — status: active -&gt; inactive</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 01:29:59</td>
+                <td>Red</td>
+                <td><span class="action">update</span></td>
+                <td>companies #2</td>
+                <td>Renamed company from 'a' to 'A company'</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 01:28:13</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 01:27:48</td>
+                <td>Reese mercado</td>
+                <td><span class="action">logout</span></td>
+                <td>users #2</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 01:24:09</td>
+                <td>Reese mercado</td>
+                <td><span class="action">login</span></td>
+                <td>users #2</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 00:43:30</td>
+                <td>Reese mercado</td>
+                <td><span class="action">login</span></td>
+                <td>users #2</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 00:43:05</td>
+                <td>Reese mercado</td>
+                <td><span class="action">logout</span></td>
+                <td>users #2</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-07 00:42:51</td>
+                <td>Reese mercado</td>
+                <td><span class="action">login</span></td>
+                <td>users #2</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 01:12:46</td>
+                <td>Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #3</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 01:05:01</td>
+                <td>Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #3</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 01:04:50</td>
+                <td>Red</td>
+                <td><span class="action">register</span></td>
+                <td>admin #3</td>
+                <td>New account registered: 212121@gmail.com</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 01:04:32</td>
+                <td>Reese mercado</td>
+                <td><span class="action">logout</span></td>
+                <td>users #2</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:55:44</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #12</td>
+                <td>Updated last order date to 2026-09-04</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:55:42</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #13</td>
+                <td>Updated last order date to 2026-09-04</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:55:42</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #7</td>
+                <td>Updated last order date to 2026-09-04</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:55:28</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #8</td>
+                <td>Updated last order date to 2026-09-04</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:55:27</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #6</td>
+                <td>Updated last order date to 2026-09-04</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:55:27</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #7</td>
+                <td>Updated last order date to 2026-09-04</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:55:26</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #5</td>
+                <td>Updated last order date to 2026-09-04</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:55:25</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #3</td>
+                <td>Updated last order date to 2026-09-04</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:55:25</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #4</td>
+                <td>Updated last order date to 2026-09-04</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:55:23</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #2</td>
+                <td>Updated last order date to 2026-09-04</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:50:24</td>
+                <td>Reese mercado</td>
+                <td><span class="action">login</span></td>
+                <td>users #2</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:50:01</td>
+                <td>Mark Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #1</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:49:50</td>
+                <td>Mark Red</td>
+                <td><span class="action">create</span></td>
+                <td>branches #15</td>
+                <td>Added branch: none</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:49:31</td>
+                <td>Mark Red</td>
+                <td><span class="action">create</span></td>
+                <td>companies #3</td>
+                <td>Created company: b</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:49:31</td>
+                <td>Mark Red</td>
+                <td><span class="action">create</span></td>
+                <td>branches #14</td>
+                <td>Added branch: fff</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:49:01</td>
+                <td>Mark Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #1</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:48:55</td>
+                <td>Reese mercado</td>
+                <td><span class="action">logout</span></td>
+                <td>users #2</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:47:42</td>
+                <td>Reese mercado</td>
+                <td><span class="action">create</span></td>
+                <td>branches #13</td>
+                <td>Added branch: none</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:47:31</td>
+                <td>Reese mercado</td>
+                <td><span class="action">create</span></td>
+                <td>branches #12</td>
+                <td>Added branch: none</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:47:23</td>
+                <td>Reese mercado</td>
+                <td><span class="action">create</span></td>
+                <td>branches #11</td>
+                <td>Added branch: none</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:47:09</td>
+                <td>Reese mercado</td>
+                <td><span class="action">create</span></td>
+                <td>branches #10</td>
+                <td>Added branch: none</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:46:59</td>
+                <td>Reese mercado</td>
+                <td><span class="action">create</span></td>
+                <td>branches #9</td>
+                <td>Added branch: none</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:46:46</td>
+                <td>Reese mercado</td>
+                <td><span class="action">create</span></td>
+                <td>branches #8</td>
+                <td>Added branch: none</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:46:34</td>
+                <td>Reese mercado</td>
+                <td><span class="action">create</span></td>
+                <td>branches #7</td>
+                <td>Added branch: none</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:46:25</td>
+                <td>Reese mercado</td>
+                <td><span class="action">create</span></td>
+                <td>branches #6</td>
+                <td>Added branch: none</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:46:07</td>
+                <td>Reese mercado</td>
+                <td><span class="action">create</span></td>
+                <td>branches #5</td>
+                <td>Added branch: none</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:45:38</td>
+                <td>Reese mercado</td>
+                <td><span class="action">create</span></td>
+                <td>branches #4</td>
+                <td>Added branch: none</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:45:29</td>
+                <td>Reese mercado</td>
+                <td><span class="action">create</span></td>
+                <td>branches #3</td>
+                <td>Added branch: none</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:42:55</td>
+                <td>Reese mercado</td>
+                <td><span class="action">create</span></td>
+                <td>companies #2</td>
+                <td>Created company: a</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:42:55</td>
+                <td>Reese mercado</td>
+                <td><span class="action">create</span></td>
+                <td>branches #2</td>
+                <td>Added branch: none</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:41:33</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #1</td>
+                <td>Updated last order date to 2027-11-18</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:36:00</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #1</td>
+                <td>Updated last order date to 2026-01-14</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:35:44</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #1</td>
+                <td>Updated last order date to 2025-02-04</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:35:10</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #1</td>
+                <td>Updated last order date to 2026-04-08</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:34:56</td>
+                <td>Reese mercado</td>
+                <td><span class="action">login</span></td>
+                <td>users #2</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:34:53</td>
+                <td>Mark Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #1</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:33:55</td>
+                <td>Mark Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #1</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:32:43</td>
+                <td>Reese mercado</td>
+                <td><span class="action">logout</span></td>
+                <td>users #2</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:31:52</td>
+                <td>Reese mercado</td>
+                <td><span class="action">login</span></td>
+                <td>users #2</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:31:49</td>
+                <td>Mark Red</td>
+                <td><span class="action">logout</span></td>
+                <td>users #1</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-04 00:31:29</td>
+                <td>Mark Red</td>
+                <td><span class="action">login</span></td>
+                <td>users #1</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:54:11</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #1</td>
+                <td>Updated last order date to 2026-09-03</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:53:42</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #1</td>
+                <td>Updated last order date to 2026-11-26</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:52:39</td>
+                <td>Reese mercado</td>
+                <td><span class="action">export</span></td>
+                <td>branches</td>
+                <td>Exported own clients</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:52:37</td>
+                <td>Reese mercado</td>
+                <td><span class="action">export</span></td>
+                <td>branches</td>
+                <td>Exported own clients</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:52:37</td>
+                <td>Reese mercado</td>
+                <td><span class="action">export</span></td>
+                <td>branches</td>
+                <td>Exported own clients</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:52:35</td>
+                <td>Reese mercado</td>
+                <td><span class="action">export</span></td>
+                <td>branches</td>
+                <td>Exported own clients</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:52:34</td>
+                <td>Reese mercado</td>
+                <td><span class="action">export</span></td>
+                <td>branches</td>
+                <td>Exported own clients</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:52:32</td>
+                <td>Reese mercado</td>
+                <td><span class="action">export</span></td>
+                <td>branches</td>
+                <td>Exported own clients</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:52:29</td>
+                <td>Reese mercado</td>
+                <td><span class="action">export</span></td>
+                <td>branches</td>
+                <td>Exported own clients</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:52:25</td>
+                <td>Reese mercado</td>
+                <td><span class="action">export</span></td>
+                <td>branches</td>
+                <td>Exported own clients</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:48:33</td>
+                <td>Reese mercado</td>
+                <td><span class="action">export</span></td>
+                <td>branches</td>
+                <td>Exported own clients</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:48:27</td>
+                <td>Reese mercado</td>
+                <td><span class="action">export</span></td>
+                <td>branches</td>
+                <td>Exported own clients</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:47:55</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit_request</span></td>
+                <td>modification_requests #1</td>
+                <td>Requested change to address on branch #1</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:47:23</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #1</td>
+                <td>Updated last order date to 2022-03-09</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:45:48</td>
+                <td>Reese mercado</td>
+                <td><span class="action">edit</span></td>
+                <td>order_dates #1</td>
+                <td>Updated last order date to 2026-09-03</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:45:06</td>
+                <td>Reese mercado</td>
+                <td><span class="action">create</span></td>
+                <td>companies #1</td>
+                <td>Created company: Company name or something</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:45:06</td>
+                <td>Reese mercado</td>
+                <td><span class="action">create</span></td>
+                <td>branches #1</td>
+                <td>Added branch: none</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:42:57</td>
+                <td>Reese mercado</td>
+                <td><span class="action">export</span></td>
+                <td>branches</td>
+                <td>Exported own clients</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:28:08</td>
+                <td>Reese mercado</td>
+                <td><span class="action">login</span></td>
+                <td>users #2</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:28:01</td>
+                <td>Reese mercado</td>
+                <td><span class="action">logout</span></td>
+                <td>users #2</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:26:47</td>
+                <td>Reese mercado</td>
+                <td><span class="action">login</span></td>
+                <td>users #2</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:13:26</td>
+                <td>Reese mercado</td>
+                <td><span class="action">logout</span></td>
+                <td>users #2</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:13:22</td>
+                <td>Reese mercado</td>
+                <td><span class="action">login</span></td>
+                <td>users #2</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 07:07:11</td>
+                <td>Reese mercado</td>
+                <td><span class="action">logout</span></td>
+                <td>users #2</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 05:11:14</td>
+                <td>Reese mercado</td>
+                <td><span class="action">login</span></td>
+                <td>users #2</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 03:22:02</td>
+                <td>Reese mercado</td>
+                <td><span class="action">logout</span></td>
+                <td>users #2</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 03:22:01</td>
+                <td>Reese mercado</td>
+                <td><span class="action">login</span></td>
+                <td>users #2</td>
+                <td>User logged in</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 03:21:51</td>
+                <td>Reese mercado</td>
+                <td><span class="action">logout</span></td>
+                <td>users #2</td>
+                <td>User logged out</td>
+            </tr>
+                    <tr>
+                <td>2026-09-03 03:21:49</td>
+                <td>Reese mercado</td>
+                <td><span class="action">login</span></td>
+                <td>users #2</td>
+                <td>User logged in</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

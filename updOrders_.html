@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<title>Update Order Dates — Syspoint CRM</title>
+<head>
+<meta charset="UTF-8">
+<title>Add Company/Branch — Syspoint CRM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+
+    :root { --black:#080808; --red:#d71920; --red-dark:#b51218; --ink:#171717; --muted:#707070; --line:#e4e4e4; --canvas:#f7f7f7; --white:#fff; }
+    * { box-sizing: border-box; }
+    body { margin:0; color:var(--ink); background:var(--canvas); font-family:"DM Sans", sans-serif; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; padding:18px clamp(20px,4vw,54px); border-bottom:1px solid var(--line); background:var(--ink); }
+    .crumb { color:var(--muted); font-size:0.82rem; }
+    .crumb strong { color:var(--white); }
+    .content { max-width: 760px; margin:0 auto; padding:20px clamp(20px,4vw,54px) 60px; }
+    h1 { margin:0 0 6px; padding-top: 10px; padding-bottom: 15px; font-family:"Space Grotesk", sans-serif; font-size:clamp(1.5rem,3vw,2rem); }
+    .content > p.sub { margin:0 0 24px; color:var(--muted); font-size:0.88rem; }
+        
+    .card{ 
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--white);
+    padding: 20px clamp(1px, 3vw, 15px);
+    border-color: darkgray;
+}
+    
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 8px; border-bottom: 1px darkgrey; font-size: 14px; }
+    input[type=date] { padding: 6px; }
+    button { padding: 6px 12px; border: 1px solid transparent;
+    border-radius: 5px; color: var(--white); background: var(--red); font-weight: 700; cursor: pointer; }
+    .message { background: #eef6f3; padding: 10px; border-radius: 6px; font-size: 14px; }
+
+    a { text-decoration: none; color: var(--white); }
+    button { cursor: pointer; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: 5px; padding: 11px 15px; color: var(--white); background: var(--red); font-size: 0.82rem; font-weight: 700; transition: background 150ms ease, transform 150ms ease; }
+    .button:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 6px 14px rgba(215, 25, 32, 0.18); }
+
+ </style>
+    </head>
+<body>
+    <header class="topbar">
+    <div class="crumb">Workspace / <strong>Add company</strong></div>
+    <div class="button"><a href="dashboard.php">Back to dashboard</a></div>
+</header>
+<div class="content">
+<h1>Update Order Dates</h1>
+<div class="card">
+<table>
+        <tbody><tr><th>Company</th><th>Branch</th><th>Last order</th><th>Update</th></tr>
+                    <tr>
+                <td>A company</td>
+                <td>none</td>
+                <td>2026-09-04</td>
+                <td>
+                    <form method="POST" action="order_dates.php" style="display:flex; gap:6px;">
+                        <input type="hidden" name="csrf_token" value="652c5705491328e67227827d741e6ee12a668a637c0e7a5e5807349407f8795c">
+                        <input type="hidden" name="branch_id" value="2">
+                        <input type="date" name="order_date" value="2026-09-07" required="">
+                        <button type="submit">Save</button>
+                    </form>
+                </td>
+            </tr>
+                    <tr>
+                <td>A company</td>
+                <td>none</td>
+                <td>2026-09-04</td>
+                <td>
+                    <form method="POST" action="order_dates.php" style="display:flex; gap:6px;">
+                        <input type="hidden" name="csrf_token" value="652c5705491328e67227827d741e6ee12a668a637c0e7a5e5807349407f8795c">
+                        <input type="hidden" name="branch_id" value="3">
+                        <input type="date" name="order_date" value="2026-09-07" required="">
+                        <button type="submit">Save</button>
+                    </form>
+                </td>
+            </tr>
+                    <tr>
+                <td>A company</td>
+                <td>none</td>
+                <td>2026-09-04</td>
+                <td>
+                    <form method="POST" action="order_dates.php" style="display:flex; gap:6px;">
+                        <input type="hidden" name="csrf_token" value="652c5705491328e67227827d741e6ee12a668a637c0e7a5e5807349407f8795c">
+                        <input type="hidden" name="branch_id" value="4">
+                        <input type="date" name="order_date" value="2026-09-07" required="">
+                        <button type="submit">Save</button>
+                    </form>
+                </td>
+            </tr>
+                    <tr>
+                <td>A company</td>
+                <td>none</td>
+                <td>2026-09-04</td>
+                <td>
+                    <form method="POST" action="order_dates.php" style="display:flex; gap:6px;">
+                        <input type="hidden" name="csrf_token" value="652c5705491328e67227827d741e6ee12a668a637c0e7a5e5807349407f8795c">
+                        <input type="hidden" name="branch_id" value="5">
+                        <input type="date" name="order_date" value="2026-09-07" required="">
+                        <button type="submit">Save</button>
+                    </form>
+                </td>
+            </tr>
+                    <tr>
+                <td>A company</td>
+                <td>none</td>
+                <td>2026-09-04</td>
+                <td>
+                    <form method="POST" action="order_dates.php" style="display:flex; gap:6px;">
+                        <input type="hidden" name="csrf_token" value="652c5705491328e67227827d741e6ee12a668a637c0e7a5e5807349407f8795c">
+                        <input type="hidden" name="branch_id" value="6">
+                        <input type="date" name="order_date" value="2026-09-07" required="">
+                        <button type="submit">Save</button>
+                    </form>
+                </td>
+            </tr>
+                    <tr>
+                <td>A company</td>
+                <td>none</td>
+                <td>2026-09-04</td>
+                <td>
+                    <form method="POST" action="order_dates.php" style="display:flex; gap:6px;">
+                        <input type="hidden" name="csrf_token" value="652c5705491328e67227827d741e6ee12a668a637c0e7a5e5807349407f8795c">
+                        <input type="hidden" name="branch_id" value="7">
+                        <input type="date" name="order_date" value="2026-09-07" required="">
+                        <button type="submit">Save</button>
+                    </form>
+                </td>
+            </tr>
+                    <tr>
+                <td>A company</td>
+                <td>none</td>
+                <td>2026-09-04</td>
+                <td>
+                    <form method="POST" action="order_dates.php" style="display:flex; gap:6px;">
+                        <input type="hidden" name="csrf_token" value="652c5705491328e67227827d741e6ee12a668a637c0e7a5e5807349407f8795c">
+                        <input type="hidden" name="branch_id" value="8">
+                        <input type="date" name="order_date" value="2026-09-07" required="">
+                        <button type="submit">Save</button>
+                    </form>
+                </td>
+            </tr>
+                    <tr>
+                <td>A company</td>
+                <td>none</td>
+                <td>—</td>
+                <td>
+                    <form method="POST" action="order_dates.php" style="display:flex; gap:6px;">
+                        <input type="hidden" name="csrf_token" value="652c5705491328e67227827d741e6ee12a668a637c0e7a5e5807349407f8795c">
+                        <input type="hidden" name="branch_id" value="9">
+                        <input type="date" name="order_date" value="2026-09-07" required="">
+                        <button type="submit">Save</button>
+                    </form>
+                </td>
+            </tr>
+                    <tr>
+                <td>A company</td>
+                <td>none</td>
+                <td>—</td>
+                <td>
+                    <form method="POST" action="order_dates.php" style="display:flex; gap:6px;">
+                        <input type="hidden" name="csrf_token" value="652c5705491328e67227827d741e6ee12a668a637c0e7a5e5807349407f8795c">
+                        <input type="hidden" name="branch_id" value="10">
+                        <input type="date" name="order_date" value="2026-09-07" required="">
+                        <button type="submit">Save</button>
+                    </form>
+                </td>
+            </tr>
+                    <tr>
+                <td>A company</td>
+                <td>none</td>
+                <td>—</td>
+                <td>
+                    <form method="POST" action="order_dates.php" style="display:flex; gap:6px;">
+                        <input type="hidden" name="csrf_token" value="652c5705491328e67227827d741e6ee12a668a637c0e7a5e5807349407f8795c">
+                        <input type="hidden" name="branch_id" value="11">
+                        <input type="date" name="order_date" value="2026-09-07" required="">
+                        <button type="submit">Save</button>
+                    </form>
+                </td>
+            </tr>
+                    <tr>
+                <td>A company</td>
+                <td>none</td>
+                <td>2026-09-04</td>
+                <td>
+                    <form method="POST" action="order_dates.php" style="display:flex; gap:6px;">
+                        <input type="hidden" name="csrf_token" value="652c5705491328e67227827d741e6ee12a668a637c0e7a5e5807349407f8795c">
+                        <input type="hidden" name="branch_id" value="12">
+                        <input type="date" name="order_date" value="2026-09-07" required="">
+                        <button type="submit">Save</button>
+                    </form>
+                </td>
+            </tr>
+                    <tr>
+                <td>A company</td>
+                <td>none</td>
+                <td>2026-09-04</td>
+                <td>
+                    <form method="POST" action="order_dates.php" style="display:flex; gap:6px;">
+                        <input type="hidden" name="csrf_token" value="652c5705491328e67227827d741e6ee12a668a637c0e7a5e5807349407f8795c">
+                        <input type="hidden" name="branch_id" value="13">
+                        <input type="date" name="order_date" value="2026-09-07" required="">
+                        <button type="submit">Save</button>
+                    </form>
+                </td>
+            </tr>
+                    <tr>
+                <td>Company name or something</td>
+                <td>none</td>
+                <td>2027-11-18</td>
+                <td>
+                    <form method="POST" action="order_dates.php" style="display:flex; gap:6px;">
+                        <input type="hidden" name="csrf_token" value="652c5705491328e67227827d741e6ee12a668a637c0e7a5e5807349407f8795c">
+                        <input type="hidden" name="branch_id" value="1">
+                        <input type="date" name="order_date" value="2026-09-07" required="">
+                        <button type="submit">Save</button>
+                    </form>
+                </td>
+            </tr>
+            </tbody></table>
+    </div>
+    </div>
+</body>

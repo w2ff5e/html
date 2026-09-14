@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<title>Notifications</title>
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+
+    :root { --black:#080808; --red:#d71920; --red-dark:#b51218; --ink:#171717; --muted:#707070; --line:#e4e4e4; --canvas:#f7f7f7; --white:#fff; }
+    * { box-sizing: border-box; }
+    body { margin:0; color:var(--ink); background:var(--canvas); font-family:"DM Sans", sans-serif; }
+    a { text-decoration:none; color:var(--red); }
+    .topbar { display:flex; align-items:center; justify-content:space-between; padding:18px clamp(20px,4vw,54px); border-bottom:1px solid var(--line); background:var(--ink); }
+    .crumb { color:var(--muted); font-size:0.82rem; }
+    .crumb strong { color:var(--white); }
+    .content { max-width:760px; margin:0 auto; padding:30px clamp(20px,4vw,54px) 60px; }
+    .heading { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:22px; }
+    h1 { margin:0; font-family:"Space Grotesk", sans-serif; font-size:clamp(1.5rem,3vw,2rem); }
+    .mark-all-btn { border:1px solid var(--line); border-radius:5px; padding:8px 14px; background:var(--white); color:var(--ink); font-size:0.8rem; font-weight:700; cursor:pointer; }
+    .mark-all-btn:hover { background:#f2f2f2; }
+    .empty-state { border:1px dashed #cfcfcf; padding:50px 20px; color:var(--muted); background:var(--white); text-align:center; border-radius:6px; }
+    .notif-list { display:flex; flex-direction:column; gap:10px; }
+    .notif { display:flex; align-items:center; justify-content:space-between; gap:14px; border:1px solid darkgray; border-radius:6px; padding:14px 16px; background:var(--white); }
+    .notif.unread { border-left:3px solid var(--red); background:#fffaf9; }
+    .notif-body strong { display:block; font-size:0.88rem; }
+    .notif-body span { display:block; margin-top:3px; color:var(--muted); font-size:0.76rem; }
+    .badge { display:inline-block; padding:2px 9px; border-radius:10px; font-size:0.7rem; font-weight:700; margin-right:8px; }
+    .badge.warning { color:#93650b; background:#fdf1d6; }
+    .badge.danger { color:#a32b26; background:#fbe1e0; }
+    
+
+    a { text-decoration: none; color: var(--white); }
+    button { cursor: pointer; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: 5px; padding: 11px 15px; color: var(--white); background: var(--red); font-size: 0.82rem; font-weight: 700; transition: background 150ms ease, transform 150ms ease; }
+    .button:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 6px 14px rgba(215, 25, 32, 0.18); }
+
+</style>
+</head>
+<body>
+<header class="topbar">
+    <div class="crumb">Workspace / <strong>Notifications</strong></div>
+    <div class="button"><a href="dashboard.php">Back to dashboard</a></div>
+</header>
+<div class="content">
+    <div class="heading">
+        <h1>Notifications</h1>
+                    <form method="POST" action="notifications.php">
+                <input type="hidden" name="csrf_token" value="27e3fc8f73ac5381395bbec0b37a60b6526b513961695c25c440a17482da2270">
+                <input type="hidden" name="mark_all_read" value="1">
+                <div class="button">Mark all as read</div>
+            </form>
+            </div>
+
+            <div class="notif-list">
+                                            <div class="notif ">
+                    <div class="notif-body">
+                        <strong><span class="badge danger">Reassignment flag</span>PCkurt — tandang sora</strong>
+                        <span>2026-09-08 02:03:08</span>
+                    </div>
+                                    </div>
+                                            <div class="notif ">
+                    <div class="notif-body">
+                        <strong><span class="badge danger">Reassignment flag</span>A company — none</strong>
+                        <span>2026-09-08 01:09:18</span>
+                    </div>
+                                    </div>
+                    </div>
+    </div>
+
+</body>

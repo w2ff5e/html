@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Syspoint client management dashboard.">
+    <title>Manage Companies | Syspoint CRM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+<style>
+
+    :root { --black:#080808; --red:#d71920; --red-dark:#b51218; --ink:#171717; --muted:#707070; --line:#e4e4e4; --canvas:#f7f7f7; --white:#fff; }
+    * { box-sizing: border-box; }
+    body { margin:0; color:var(--ink); background:var(--canvas); font-family:"DM Sans", sans-serif; }
+
+    .topbar { display:flex; align-items:center; justify-content:space-between; padding:18px clamp(20px,4vw,54px); border-bottom:1px solid var(--line); background:var(--ink); }
+    .crumb { color:var(--muted); font-size:0.82rem; }
+    .crumb strong { color:var(--white); }
+    .content { max-width:900px; margin:0 auto; padding:30px clamp(20px,4vw,54px) 60px; }
+    h1 { margin:0; font-family:"Space Grotesk", sans-serif; font-size:clamp(1.5rem,3vw,2rem); }
+    .content > p.sub { margin:8px 0 24px; color:var(--muted); font-size:0.88rem; }
+    .errors { margin:0 0 18px; padding:12px 14px; border-radius:6px; color:#a32b26; background:#fff0f1; font-size:0.82rem; list-style:none; }
+    .table-card { border:2px solid var(--line); border-radius:6px; background:var(--white); overflow:hidden; }
+    table { width:100%; border-collapse:collapse; }
+    th { padding:12px 20px; background:#fbfbfb; color:#858585; font-size:0.68rem; font-weight:700; text-transform:uppercase; text-align:left; }
+    td { padding:12px 20px; border-top:1px solid #eee; font-size:0.85rem; vertical-align:middle; }
+    td:first-child { font-weight:700; }
+    .branch-count { color:var(--muted); font-size:0.78rem; }
+    .rename-form { display:flex; gap:8px; }
+    .rename-form input[type=text] { flex:1; border:1px solid var(--line); border-radius:5px; padding:7px 10px; font-size:0.82rem; outline: 0; }
+    .rename-form input:focus {border-color: var(--red); box-shadow: 0 0 0 3px rgba(215, 25, 32, 0.12);}
+    .rename-form button { border:0; border-radius:5px; padding:7px 12px; color:#fff; background:var(--red); font-size:0.78rem; font-weight:700; cursor:pointer; }
+    .rename-form button:hover { background:var(--red-dark); }
+    .saved-tag { color:#1a7a30; font-size:0.74rem; font-weight:700; margin-left:6px; }
+
+    a { text-decoration: none; color: var(--white); }
+    button { cursor: pointer; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: 5px; padding: 11px 15px; color: var(--white); background: var(--red); font-size: 0.82rem; font-weight: 700; transition: background 150ms ease, transform 150ms ease; }
+    .button:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 6px 14px rgba(215, 25, 32, 0.18); }
+
+</style>
+</head>
+<body>
+<header class="topbar">
+    <div class="crumb">Workspace / <strong>Manage companies</strong></div>
+    <div class="button"><a href="dashboard.php">Back to dashboard</a></div>
+</header>
+<div class="content">
+    <h1>Manage companies</h1>
+    <p class="sub">Renaming applies immediately and is logged for audit — no approval step, per current process.</p>
+
+    
+    <div class="table-card">
+        <table>
+            <thead><tr><th>Company</th><th>Branches</th><th style="width:320px;">Rename</th></tr></thead>
+            <tbody>
+                        <tr>
+                            <td>A company</td>
+                            <td class="branch-count">13 branches</td>
+                            <td>
+                                <form class="rename-form" method="POST" action="manage_companies.php">
+                                    <input type="hidden" name="csrf_token" value="bbd18e75f02230da875ce66ca37b5980baeb2e2e41cfa97169488940072e2ed0">
+                                    <input type="hidden" name="company_id" value="2">
+                                    <input type="text" name="new_name" value="A company" required="">
+                                    <button type="submit">Save</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Company name or something</td>
+                            <td class="branch-count">1 branch</td>
+                            <td>
+                                <form class="rename-form" method="POST" action="manage_companies.php">
+                                    <input type="hidden" name="csrf_token" value="bbd18e75f02230da875ce66ca37b5980baeb2e2e41cfa97169488940072e2ed0">
+                                    <input type="hidden" name="company_id" value="1">
+                                    <input type="text" name="new_name" value="Company name or something" required="">
+                                    <button type="submit">Save</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ade</td>
+                            <td class="branch-count">1 branch</td>
+                            <td>
+                                <form class="rename-form" method="POST" action="manage_companies.php">
+                                    <input type="hidden" name="csrf_token" value="bbd18e75f02230da875ce66ca37b5980baeb2e2e41cfa97169488940072e2ed0">
+                                    <input type="hidden" name="company_id" value="4">
+                                    <input type="text" name="new_name" value="ade" required="">
+                                    <button type="submit">Save</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>b</td>
+                            <td class="branch-count">1 branch</td>
+                            <td>
+                                <form class="rename-form" method="POST" action="manage_companies.php">
+                                    <input type="hidden" name="csrf_token" value="bbd18e75f02230da875ce66ca37b5980baeb2e2e41cfa97169488940072e2ed0">
+                                    <input type="hidden" name="company_id" value="3">
+                                    <input type="text" name="new_name" value="b" required="">
+                                    <button type="submit">Save</button>
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+        </table>
+    </div>
+</div>
+
+</body>

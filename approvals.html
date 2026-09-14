@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Approvals — Syspoint CRM</title>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+    
+    :root { --black:#080808; --red:#d71920; --red-dark:#b51218; --ink:#171717; --muted:#707070; --line:#e4e4e4; --canvas:#f7f7f7; --white:#fff; }
+    * { box-sizing: border-box; }
+    body { margin:0; color:var(--ink); background:var(--canvas); font-family:"DM Sans", sans-serif; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; padding:18px clamp(20px,4vw,54px); border-bottom:1px solid var(--line); background:var(--ink); }
+    .crumb { color:var(--muted); font-size:0.82rem; }
+    .crumb strong { color:var(--white); }
+    .content { max-width: 860px; margin:0 auto; padding:20px clamp(20px,4vw,54px) 60px; }
+    h1 { margin:0 0 6px; padding-top: 10px; padding-bottom: 15px; font-family:"Space Grotesk", sans-serif; font-size:clamp(1.5rem,3vw,2rem); }
+
+    a { text-decoration: none; color: var(--white); }
+    button { cursor: pointer; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: 5px; padding: 11px 15px; color: var(--white); background: var(--red); font-size: 0.82rem; font-weight: 700; transition: background 150ms ease, transform 150ms ease; }
+    .button:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 6px 14px rgba(215, 25, 32, 0.18); }
+
+    .card{ 
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--white);
+    padding: 20px clamp(1px, 3vw, 15px);
+    border-color: darkgray;
+}
+    table { width:100%; border-collapse:collapse; }
+    th { padding:12px 20px; background:#fbfbfb; color:#858585; font-size:0.68rem; font-weight:700; text-transform:uppercase; text-align:left; }
+    td { padding:12px 20px; border-top:1px solid #eee; font-size:0.85rem; vertical-align:middle; }
+    td:first-child { font-weight:700; }
+    button { padding: 6px 12px; cursor: pointer; margin: 0 0 3px; }
+    
+    .approve { background: #1a7a30; color: #fff; border: none; border-radius: 4px; }
+    .reject { background: #a32b26; color: #fff; border: none; border-radius: 4px; }
+    .tag { font-size: 11px; background: #fdf1d6; color: #93650b; padding: 2px 6px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+    <div class="crumb">Workspace / <strong>Pending Approvals</strong></div>
+    <div class="button"><a href="dashboard.php">Back to dashboard</a></div>
+</header>
+
+<div class="content">
+<h1>Pending Approvals</h1>
+
+<div class="card">
+    <table>
+        <tbody><tr><th>Requested by</th><th>Client</th><th>Field</th><th>Change</th><th>Actions</th></tr>
+                    <tr>
+                <td>Mark Red</td>
+                <td>A company — none</td>
+                <td>
+                    address                                    </td>
+                <td>On earth → <strong>somewhere</strong></td>
+                <td>
+                    <form method="POST" action="approvals.php" style="display:inline;">
+                        <input type="hidden" name="csrf_token" value="bbd18e75f02230da875ce66ca37b5980baeb2e2e41cfa97169488940072e2ed0">
+                        <input type="hidden" name="request_id" value="3">
+                        <button type="submit" name="decision" value="approve" class="approve">Approve</button>
+                        <button type="submit" name="decision" value="reject" class="reject">Reject</button>
+                    </form>
+                </td>
+            </tr>
+                    <tr>
+                <td>Red</td>
+                <td>ade — venus</td>
+                <td>
+                    assigned_user_id                    <br><span class="tag">significant</span>                </td>
+                <td>3 → <strong>idk</strong></td>
+                <td>
+                    <form method="POST" action="approvals.php" style="display:inline;">
+                        <input type="hidden" name="csrf_token" value="bbd18e75f02230da875ce66ca37b5980baeb2e2e41cfa97169488940072e2ed0">
+                        <input type="hidden" name="request_id" value="4">
+                        <button type="submit" name="decision" value="approve" class="approve">Approve</button>
+                        <button type="submit" name="decision" value="reject" class="reject">Reject</button>
+                    </form>
+                </td>
+            </tr>
+                    <tr>
+                <td>Red</td>
+                <td>ade — venus</td>
+                <td>
+                    branch_name                                    </td>
+                <td>venus → <strong>sxs</strong></td>
+                <td>
+                    <form method="POST" action="approvals.php" style="display:inline;">
+                        <input type="hidden" name="csrf_token" value="bbd18e75f02230da875ce66ca37b5980baeb2e2e41cfa97169488940072e2ed0">
+                        <input type="hidden" name="request_id" value="5">
+                        <button type="submit" name="decision" value="approve" class="approve">Approve</button>
+                        <button type="submit" name="decision" value="reject" class="reject">Reject</button>
+                    </form>
+                </td>
+            </tr>
+                    <tr>
+                <td>full name</td>
+                <td>PCkurt — tandang sora</td>
+                <td>
+                    branch_name                                    </td>
+                <td>tandang sora → <strong>ff</strong></td>
+                <td>
+                    <form method="POST" action="approvals.php" style="display:inline;">
+                        <input type="hidden" name="csrf_token" value="bbd18e75f02230da875ce66ca37b5980baeb2e2e41cfa97169488940072e2ed0">
+                        <input type="hidden" name="request_id" value="6">
+                        <button type="submit" name="decision" value="approve" class="approve">Approve</button>
+                        <button type="submit" name="decision" value="reject" class="reject">Reject</button>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
